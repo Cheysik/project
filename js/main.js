@@ -28,6 +28,18 @@ const personalMovieDB = {
 let a;
 let b;
 
+var i = 0;
+
+
+while (i < 2) {
+   a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('На сколько оцените его?', '')
+    personalMovieDB.movies[a] = b;
+  i++;
+  if (i == 2) {
+    break;
+  }
+}
 
 for ( let i = 0; i<2; i++){
     a = prompt('Один из последних просмотренных фильмов?', ''),
@@ -43,7 +55,6 @@ for ( let i = 0; i<2; i++){
   }
   personalMovieDB.movies[a] = b;
 }
-let i = 0;
 
 do  {
   i++;
@@ -51,6 +62,7 @@ do  {
   b = prompt('На сколько оцените его?', '')
     personalMovieDB.movies[a] = b;
 } while (i<2); 
+
 
 
 if (personalMovieDB.count < 10) {
